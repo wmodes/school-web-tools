@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Automatic Homepage Generator</title>
+    <link rel="stylesheet" href="./homepage.css">
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"></script>
+      <script type="text/javascript" src="./homepage.js" defer></script>
+  </head>
+  <body>
+    <figure class="right-align medium">
+      <img src="images/homepage-screenshot.png">
+      <figcaption>Homepage generated from Link Data</figcaption>
+    </figure>
+    <h1>Automatic Homepage Generator</h1>
+    <h3>Instructions</h3>
+    <ol>
+      <li>Construct your link data table in Excel or Google Sheets.</li>
+      <li>Paste data into Link Data Table form below.</li>
+      <li>Press Convert button.</li>
+      <li>HTML source appears in HTML Source Results box below.</li>
+      <li>Cut-and-paste HTML Source into code editor of webpage.</li>
+    </ol>
+
+    <h3>Link Data</h3>
+    <p>Paste link data into the form below in the same format as this <a href="https://docs.google.com/spreadsheets/d/1PNulXoJwSgE-wlx7-le0FDGPNE98XnOwg52iDSpcotw/edit?usp=sharing">sample link data</a>. The form expects tab-delimited data, the default for copying from Google Sheets. Note that header cells must be included and must match this example.</p>
+    <p>Here is a description of each column of the link data:
+      <ol>
+        <li>Sequential number of each course session or each week, however you want to organize it. (This could have been auto generated, but this allows you to mess with it.)</li>
+        <li>Title for the link.</li>
+        <li>URL or the page (or module) you want to link to. To get this, paste from the browser's Copy Link Address in the context menu.</li>
+        <li>Date that this topic will be covered. Date is treated as text, so any format is supported.</li>
+      </ol>
+    </p>
+
+    <div class="data">
+      <h3>Link Data Table</h3>
+      <textarea id="tab-table" placeholder="Number	Title	Link	Date
+1	Intro to the Course	/courses/10123/modules/items/438207	Mon Aug 23
+2	Intro to the Modern Web	/courses/10123/modules/items/533452	Wed Aug 25
+3	InstallFest	/courses/10123/modules/items/438216	Mon Aug 30
+4	Intro to HTML	/courses/10123/modules/items/533454	Wed Sep 1
+5	File Structure	/courses/10123/modules/items/438245	Wed Sep 8
+6	File Transfer	/courses/10123/modules/items/533455	Mon Sep 13
+      "></textarea><br>
+      <button id="convert">Convert</button>
+      <span class="status" id="status1"></span>
+    </div>
+
+    <div class="results">
+      <h3>HTML Source Results</h3>
+      <textarea id="results">Paste Link Data above and press Convert...</textarea>
+      <button id="copy">Copy</button>
+      <span class="status" id="status2"></span>
+    </div>
+  </body>
+</html>
