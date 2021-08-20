@@ -10,6 +10,9 @@ preHTML = `
     <div class="grid-row between-xs">
 `
 postHTML = `
+      <div class="col-xs-3" style="min-width:225px;padding:10px 30px 10px 30px;visibility:hidden;"></div>
+      <div class="col-xs-3" style="min-width:225px;padding:10px 30px 10px 30px;visibility:hidden;"></div>
+      <div class="col-xs-3" style="min-width:225px;padding:10px 30px 10px 30px;visibility:hidden;"></div>
     </div>
   </div>
 </div>
