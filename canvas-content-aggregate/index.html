@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Canvas Content Aggregator</title>
+    <link rel="stylesheet" href="./aggregator.css">
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"></script>
+      <script type="text/javascript" src="./aggregator.js" defer></script>
+  </head>
+  <body>
+    <figure class="right-align medium">
+      <img src="images/homepage-screenshot.png">
+      <figcaption>Homepage generated from Link Data</figcaption>
+    </figure>
+    <h1>Canvas Content Aggregator</h1>
+    <h3>Instructions</h3>
+    <ol>
+      <li>Paste a series of links from Canvas pages.</li>
+      <li>Press Convert button.</li>
+      <li>HTML source appears in HTML Source Results box below.</li>
+      <li>Cut-and-paste HTML Source into code editor of webpage.</li>
+    </ol>
+
+    <h3>Link Data</h3>
+    <p>Paste link data into the form below separated by newlines.</p>
+
+    <div class="data">
+      <h3>Link Data Table</h3>
+      <textarea id="tab-table" placeholder="https://csumb.instructure.com/courses/10123/modules/items/438207
+https://csumb.instructure.com/courses/10123/modules/items/533452
+https://csumb.instructure.com/courses/10123/modules/items/438216
+https://csumb.instructure.com/courses/10123/modules/items/533454
+https://csumb.instructure.com/courses/10123/modules/items/438245
+https://csumb.instructure.com/courses/10123/modules/items/533455
+      "></textarea><br>
+      <button id="convert">Convert</button>
+      <span class="status" id="status1"></span>
+    </div>
+
+    <div class="results">
+      <h3>HTML Source Results</h3>
+      <textarea id="results">Paste Link Data above and press Convert...</textarea>
+      <button id="copy">Copy</button>
+      <span class="status" id="status2"></span>
+    </div>
+  </body>
+</html>
