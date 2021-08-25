@@ -50,9 +50,6 @@ function get_contents(links) {
   //
   $.ajax({
     'url': links.shift(),
-    xhrFields: {
-      withCredentials: true
-    },
     'data': {
     },
     'type': 'get',
