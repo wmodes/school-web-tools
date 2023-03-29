@@ -1,42 +1,41 @@
 // Constants
 //
-numCol = 4;
+numCol = 1;
 
 // pre and post
 //
 preHTML = `
+<!-- DON'T CHANGE ANYTHIGN ABOVE HERE -->
+<!-- BEGIN SCHEDULE -->
 <div style="width: 90%;margin: 0 auto 0 auto;">
   <div class="content-box">
-    <div class="grid-row between-xs">
 `
 postHTML = `
-      <div class="col-xs-3" style="min-width:225px;padding:10px 30px 10px 30px;visibility:hidden;"></div>
-      <div class="col-xs-3" style="min-width:225px;padding:10px 30px 10px 30px;visibility:hidden;"></div>
-      <div class="col-xs-3" style="min-width:225px;padding:10px 30px 10px 30px;visibility:hidden;"></div>
-    </div>
   </div>
 </div>
+<!-- END SCHEDULE -->
 `
 
 templateHTML = `
 
-      <div class="col-xs-3" style="min-width:225px;padding:10px 30px 10px 30px;">
-        <div style="text-align:center;">
-          <div style="display: inline-block;width:100%; background-color:#0071bc; text-align: center; font-size:20pt;">
+      <div class="grid-row" style="margin:0;margin-bottom:5px;">
+        <div class="col" style="min-width:100px;text-align:center;">
+          <div style="display:inline-block;width:100%;background-color:#0071bc;text-align:center;font-size:20pt;">
             <a href="{{link}}" style="color:#ffffff;text-decoration:none;">
               <strong>{{num}}</strong>
             </a>
           </div>
         </div>
-        <div style="text-align:center;padding:20px 0 20px 0;">
-          <h4>
-            <a href="{{link}}" style="color: #757575;">
-              <strong>{{text}}</strong></a>
-          </h4>
+        <div class="col" style="text-align:left;padding-left:20px;padding-top: 8px;">
           {{date}}
         </div>
+        <div class="col" style="text-align:left;padding-left:20px;padding-top: 8px;">
+          <div style="display:inline-block;width:100%;font-size:14pt;font-weight:bold;">
+            <a href="{{link}}">
+              <strong>{{text}}</strong></a>
+          </div>
+        </div>
       </div>
-
 `
 
 // add trigger
